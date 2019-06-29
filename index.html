@@ -1,0 +1,70 @@
+<html>
+  <head>
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.css"/>
+    <link rel="stylesheet" href="Styles.css"/>
+    <link rel="stylesheet" href="bulma.css"/>
+    <title>Tic Tac Toe With Alpha Beta Pruning</title>
+    <script src="PageCodes.js"></script>
+  </head>
+  <body onload="DrawGamePad()">
+    <div class="parallax"></div>
+    <div class="row">
+        <div class="col-md-12">
+            <h1 class="Usefont Header">Tic Tac Toe</h1>
+            <p class="UseFont " style="margin-bottom: 100px;">You Can Run The Code Which Will Play MiniMax Algorithm and Also Min Player Will Be Optimal. Or You Can Play Game With Computer. <br> Enjoy The Game!!!</p>
+        </div>
+    </div>
+    <div class="parallax2"></div>
+    <div class="row" >
+        <div class="col-md-6 Options">
+            <!-- Here Are Some Options -->
+            <p style="text-align: center;">Choose Your Prefrene:</p>
+               <ul style="margin-bottom:100px">
+  <li onclick="var root = new State();
+            root.Maxpositions = [8];
+            
+            root.Minpositions = [];
+            PlayerVsComputer(root)">
+    <input type="radio" id="f-option" name="selector" checked>
+    <label for="f-option">You Vs Computer</label>
+    
+    <div class="check"></div>
+  </li>
+  
+  <li onclick="var root = new State();
+            root.Maxpositions = [5];
+            root.Minpositions = [];
+            ComputervsComputer(root)">
+    <input type="radio" id="s-option" name="selector">
+    <label for="s-option">Computer Vs Computer</label>
+    
+    <div class="check"><div class="inside"></div></div>
+  </li>
+            </ul>
+            
+            <div style="margin:50px;padding:50px" >
+         
+        </div>
+        <div class="Progrees">
+        <div style="margin:100px 100px 20px; 100px ">
+        <progress class="progress is-medium is-info" max="100">45%</progress>
+        </div>
+        <p style="text-align: center;" id="ptext">Finding The Best Node ...</p>
+        <br>
+        <p style="text-align: center;" id="Won"></p>
+        </div>
+        </div>
+        <div class="col-md-6 Options">
+            <canvas id="Gamepad"></canvas>
+        </div>
+        
+    </div>
+
+  <script src="bootstrap.js"></script>
+  <script src="Events.js"></script>
+  <script src="Minimax.js"></script>
+  <script src="Types.js"></script>
+  </body>
+</html>

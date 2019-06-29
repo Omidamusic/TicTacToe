@@ -1,0 +1,20 @@
+{
+  "name": "first",
+  "version": "1.0.0",
+  "description": "Testing Eletron",
+  "main": "main.js",
+  "scripts": {
+    "test": "Testing",
+    "start": "electron ."
+  },
+  "author": "Omid Davar",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.2",
+    "webpack": "^4.32.2"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1",
+    "electron-compiler": "^1.0.9"
+  }
+}
